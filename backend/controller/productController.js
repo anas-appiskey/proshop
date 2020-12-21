@@ -5,6 +5,7 @@ import Product from "../models/productModel.js";
 
 export const getAllProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({});
+  throw new Error("some error");
   res.json(products);
 });
 
